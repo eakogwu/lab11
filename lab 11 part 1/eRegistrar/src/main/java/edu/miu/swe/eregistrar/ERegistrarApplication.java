@@ -22,9 +22,7 @@ public class ERegistrarApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        var student  = new Student("514715","Winnie","","Muthike",  4.6f, LocalDate.of(2021, 5,24));
-        var student1  = new Student("614715","Anna","","Smith",  4.0f, LocalDate.of(2021, 5,24));
-        studentService.addNewStudent(student);
-        studentService.addNewStudent(student1);
+        var emmanuel  = new Student("612715","Emmanuel","","Akogwu",  4.3f, LocalDate.of(2021, 5,24));
+        studentService.addNewStudent(emmanuel);
     }
 }

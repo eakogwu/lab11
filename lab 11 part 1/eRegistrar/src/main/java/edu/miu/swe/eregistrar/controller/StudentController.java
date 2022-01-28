@@ -37,15 +37,11 @@ public class StudentController {
     }
 
     @PostMapping
-    public void addNewStudent(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult, Model model){
+    public String addNewStudent(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult, Model model){
         if (bindingResult.hasErrors()){
             model.addAttribute("errors",bindingResult.getAllErrors());
         }
-        studentService.addNewStudent(student);
-
-        System.out.println(student);
-
-        //return "redirect:addStudent";
+        return "redirect:addStudent";
     }
 
     @GetMapping("/{id}/delete")

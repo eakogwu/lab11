@@ -123,17 +123,4 @@ public class Student {
     public Long getStudentId() {
         return studentId;
     }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "studentId=" + studentId +
-                ", studentNumber='" + studentNumber + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", cgpa=" + cgpa +
-                ", dateOfEnrollment=" + dateOfEnrollment +
-                '}';
-    }
 }

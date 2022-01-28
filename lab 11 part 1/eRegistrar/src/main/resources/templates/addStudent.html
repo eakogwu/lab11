@@ -36,12 +36,6 @@
   <div class="container p-3">
     <form action="/students" method="post" th:object="${student}">
       <div class="input-group mb-3">
-        <span class="input-group-text" id="studentNumber"><i class="fas fa-user-alt"></i></span>
-        <input type="text" th:value="${student.studentNumber}" class="form-control" name="firstName" placeholder="Student Number" aria-label="Student Number" aria-describedby="basic-addon1">
-        <span th:if="${#fields.hasErrors('studentNumber')}" th:errors="*{studentNumber}"
-              class="alert alert-danger"></span>
-      </div>
-      <div class="input-group mb-3">
         <span class="input-group-text" id="firstName"><i class="fas fa-user-alt"></i></span>
         <input type="text" th:value="${student.firstName}" class="form-control" name="firstName" placeholder="First name" aria-label="First name" aria-describedby="basic-addon1">
         <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
@@ -68,7 +62,7 @@
       <small>Date of enrollment</small>
       <div class="input-group mb-3">
         <span class="input-group-text" id="dateOfEnrollment"><i class="far fa-calendar-alt"></i></span>
-        <input type="date" th:value="${student.dateOfEnrollment}"  class="form-control" name="dateOfEnrollment" format="dd-mm-yyyy"  placeholder="dd-mm-yyyy" aria-label="dateOfEnrollment" aria-describedby="basic-addon1">
+        <input type="date" th:value="${student.dateOfEnrollment}" class="form-control" name="dateOfEnrollment" placeholder="Date of Enrollment" aria-label="dateOfEnrollment" aria-describedby="basic-addon1">
         <span th:if="${#fields.hasErrors('dateOfEnrollment')}" th:errors="*{dateOfEnrollment}"
               class="alert alert-danger"></span>
       </div>
